@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>ANEEIUN - Official Page</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -20,6 +21,10 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -48,14 +53,17 @@
             <div class="row">
                 <div class="col">
                     <div class="rotating-card-container ">
-                        <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
-                            <div class="front front-background" style="background-image: url({{ asset('assets/albums/1/COVER.png') }});">
+                        <div
+                            class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                            <div class="front front-background"
+                                style="background-image: url({{ asset('assets/albums/1/COVER.png') }});">
                             </div>
-                            <div class="back back-background" style="background-image: url({{ asset('assets/albums/1/back.png') }});">
+                            <div class="back back-background"
+                                style="background-image: url({{ asset('assets/albums/1/back.png') }});">
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col">
                     <div class="row-reverse">
@@ -74,7 +82,7 @@
                             </p>
                         </div>
                         <div class="col d-flex justify-content-center">
-                            <button class="btn btn-dark rounded-5"><i class="fa-solid fa-cart-shopping"></i>
+                            <button class="btn btn-dark rounded-5" type="button" id="buy"><i class="fa-solid fa-cart-shopping"></i>
                                 Buy</button>
                         </div>
                     </div>
@@ -126,7 +134,8 @@
                                 <h4 class="text-white">At The Initation</h4><br>
                                 <p class="text-white">
                                     The universe as an entity that creates existence and breaks nothingness, while being
-                                    described with contrasting qualities: hostile and premature in the twilight, perfect and singular like
+                                    described with contrasting qualities: hostile and premature in the twilight, perfect
+                                    and singular like
                                     transcendence-less death.
                                 </p> <br>
                                 <audio id="player1" controls>
@@ -186,22 +195,22 @@
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                     <h2 class="text-white mb-5">Contact Me</h2>
-                    <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form class="form-signup" id="contactForm">
                         <div class="row-reverse">
                             <div class="col mb-2">
                                 <input type="text" name="full_name" id="full_name" class="form-control"
-                                    placeholder="Full name">
+                                    placeholder="Full name" data-title="Name">
                             </div>
                             <div class="col mb-2">
                                 <input type="email" name="email" id="email" class="form-control"
-                                    placeholder="Email">
+                                    placeholder="Email" data-title="Email">
                             </div>
                             <div class="col mb-2">
                                 <textarea name="description" id="description" class="form-control" placeholder="please leave a message..."
-                                    cols="30" rows="10"></textarea>
+                                    cols="30" rows="10" data-title="Description"></textarea>
                             </div>
                             <div class="col my-2">
-                                <button class="btn btn-dark" type="button">Send</button>
+                                <button class="btn btn-dark" type="button" id="btnSubmitCreate">Send</button>
                             </div>
                         </div>
                     </form>
@@ -296,7 +305,12 @@
         <div class="container px-4 px-lg-5">Copyright &copy; ANEEIUN 2024</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    @vite('resources/js/app.js')
+    <script>
+        var createUrl = "{{ route('store') }}"
+    </script>
+    @vite('resources/js/app.js', 'resources/js/components/contacts/store.js')
 </body>
 
 </html>
+
+
