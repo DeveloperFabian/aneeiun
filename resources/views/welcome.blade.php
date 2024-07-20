@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>ANEEIUN - Official Page</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{asset('assets/favicon/FAVICON.PNG')}}" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link
@@ -51,7 +51,7 @@
     <header class="masthead">
         <div class="container px-4 px-lg-5 d-flex h-100 align-items-center">
             <div class="row">
-                <div class="col">
+                <div class="col-xl-6 col-md-12 col-sm-12">
                     <div class="rotating-card-container ">
                         <div
                             class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
@@ -63,9 +63,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="col">
+                <div class="col-xl-6 col-md-12 col-sm-12">
                     <div class="row-reverse">
                         <div class="col d-flex justify-content-center my-5">
                             <img src="{{ asset('assets/logo/LOGO-FILTER.PNG') }}" alt="" class="w-50"
@@ -181,10 +180,8 @@
                 </div>
             </div>
             <div class="row gx-0 mb-lg-5 align-items-center justify-content-center p-5">
-                <div class="col-xl-10 col-lg-10">
-                    <iframe width="1280" height="540" class="embed-responsive d-none" src=""
-                        title="" frameborder="0"></iframe>
-                    <img src="{{ asset('assets/band/fake_video.png') }}" alt="">
+                <div class="col-xl-12 col-lg-12 col-sm-12">
+                    <img src="{{ asset('assets/band/fake_video.png') }}" alt="" class="w-100">
                 </div>
             </div>
         </div>
