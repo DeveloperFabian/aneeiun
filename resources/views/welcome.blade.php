@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>ANEEIUN - Official Page</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
     @vite('resources/css/app.css')
 </head>
 
 <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand" href="#page-top">
+                <img src="{{ asset('assets/logo/LOGO-WHITE.PNG') }}" alt="" class="w-25" id="logo_white">
+            </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -29,20 +33,34 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Media</a></li>
                     <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <header class="masthead">
-        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-            <div class="d-flex justify-content-center">
-                <div class="text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by
-                        Start Bootstrap.</h2>
-                    <a class="btn btn-primary" href="#about">Get Started</a>
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center">
+            <div class="row">
+                <div class="col">
+                    <img src="{{ asset('assets/albums/1/COVER.png') }}" alt="" class="w-100 rounded-5 zoom"
+                        id="album_01">
+                </div>
+                <div class="col">
+                    <div class="row-reverse">
+                        <div class="col d-flex justify-content-center my-5">
+                            <img src="{{ asset('assets/logo/LOGO-FILTER.PNG') }}" alt="" class="w-50"
+                                id="logo_filter">
+                        </div>
+                        <div class="col d-flex justify-content-center my-5 px-5">
+                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus neque repudiandae
+                                animi, illum laborum voluptatibus error vel labore. Cumque ratione quo quidem error
+                                deserunt itaque similique cum aspernatur dicta velit?</p>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <button class="btn btn-dark rounded-5"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +81,7 @@
             <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
         </div>
     </section>
-    <section class="projects-section bg-light" id="projects">
+    <section class="projects-section" id="projects">
         <div class="container px-4 px-lg-5">
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                 <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg"

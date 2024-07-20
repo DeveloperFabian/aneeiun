@@ -67,7 +67,7 @@
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
     --bs-body-color: #212529;
-    --bs-body-bg: #fff;
+    --bs-body-bg: #000;
     --bs-border-width: 1px;
     --bs-border-style: solid;
     --bs-border-color: #dee2e6;
@@ -104,7 +104,10 @@ body {
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
-    background-color: var(--bs-body-bg);
+    background-image: url('https://wallpapercave.com/wp/wp6656168.jpg');
+    background-size: cover; /* Cubre toda el área del contenedor */
+    background-repeat: no-repeat; /* No se repite */
+    background-position: center; /* Centra la imagen */
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -12638,7 +12641,7 @@ body {
     }
 
     #mainNav.navbar-shrink {
-        background-color: #fff;
+        background: #00000080;
     }
 
     #mainNav.navbar-shrink .navbar-brand {
@@ -12652,17 +12655,17 @@ body {
     }
 
     #mainNav.navbar-shrink .nav-link:hover {
-        color: #64a19d;
+        color: #fff;
     }
 
     #mainNav.navbar-shrink .nav-link:active {
-        color: #467370;
+        color: #fff;
     }
 
     #mainNav.navbar-shrink .nav-link.active {
-        color: #64a19d;
+        color: #fff;
         outline: none;
-        border-bottom: 0.25rem solid #64a19d;
+        border-bottom: 0.25rem solid #fff;
     }
 }
 
@@ -12741,6 +12744,7 @@ body {
 
 .projects-section {
     padding: 10rem 0;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .projects-section .featured-text {
@@ -12767,7 +12771,7 @@ body {
 
 .signup-section {
     padding: 10rem 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -12832,4 +12836,13 @@ body {
 
 .footer {
     padding: 5rem 0;
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
