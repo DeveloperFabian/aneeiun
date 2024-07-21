@@ -93,7 +93,7 @@ body {
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
-    background-image: url('https://wallpapercave.com/wp/wp6656168.jpg');
+    background-image: url('/assets/background/1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
