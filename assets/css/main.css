@@ -1657,7 +1657,7 @@ section,
 }
 
 .with-background {
-  background-image: url('/material/albums/1/COVER.png');
+  background-image: url('/material/albums/1/COVER.PNG');
   background-size: cover; /* Cubre todo el contenedor con la imagen */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita repetir la imagen */
